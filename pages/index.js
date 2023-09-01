@@ -1,5 +1,6 @@
-import Feature from "../components/Feature";
-import Pricing from "../components/Pricing";
+import Value from "../components/Value";
+import Kartapay from "../components/Kartapay";
+import Products from "../components/Products";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout/Layout";
 import SeoHead from "../components/SeoHead";
@@ -10,8 +11,9 @@ export default function Home() {
       <SeoHead title='LaslesVPN Landing Page' />
       <Layout>
         <Hero />
-        <Feature />
-        <Pricing />
+        <Value />
+        <Kartapay />
+        <Products />
       </Layout>
     </>
   );
