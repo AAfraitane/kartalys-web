@@ -11,21 +11,21 @@ const Testimoni = ({
   listTestimoni = [
     {
       name: "Naoufad SAANDI",
-      image: "/assets/team-member-01.jpg",
+      image: "/assets/team-member-01.png",
       position: "CEO",
       testimoni:
         "Data Scientist",
     },
     {
       name: "Samir SAID ALI",
-      image: "/assets/team-member-02.jpg",
+      image: "/assets/team-member-02.png",
       position: "CTO",
       testimoni:
         "Senior Software Engineer",
     },
     {
       name: "Abdoul-Hakim AFRAITANE",
-      image: "/assets/team-member-03.jpg",
+      image: "/assets/team-member-03.png",
       position: "COO",
       testimoni:
         "Senior Software Engineer",
@@ -76,26 +76,23 @@ const Testimoni = ({
       >
         {listTestimoni.map((listTestimonis, index) => (
           <div className="px-3 flex items-stretch" key={index}>
-            <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
+            <div className="border-1 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
               <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
                 <div className="flex order-2 xl:order-1">
                   <Image
-                    // Rounded Image
-                    className="rounded-full"
                     src={listTestimonis.image}
                     height={80}
                     width={80}
-                    
                     alt="Icon team member"
                   />
                   <div className="flex flex-col ml-5 text-left">
-                    <p className="text-lg text-black-600 capitalize">
+                    <p className="text-md text-black-600 capitalize">
                       {listTestimonis.name}
                     </p>
                     <p className="text-sm text-black-500 capitalize">
                       {listTestimonis.position}
                     </p>
-                    <p className="mt-5 text-left">{listTestimonis.testimoni}</p>
+                    <p className="text-left">{listTestimonis.testimoni}</p>
                   </div>
                 </div>
               </div>
