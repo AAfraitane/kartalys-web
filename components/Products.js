@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useId, useState } from "react";
 import Image from "next/image";
 import Testimoni from "./Testimoni";
 import ButtonPrimary from "./misc/ButtonPrimary";
@@ -8,8 +8,28 @@ import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
-const Products = () => {
+const kartalysListId = "10323574"
+
+
+
+const Products = (props) => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+
+  const emailRegistrationId = 'emailRegistrationId';
+  const [input, setInput] = useState(props?.value ?? '');
+
+  const registerEmailToNewsletter = (email) => {
+    // fetch("http://localhost:3001/api/todos", {
+    //     method: "POST",
+    //     body: JSON.stringify({
+    //       email,
+    //       listId: kartalysListId,
+    //     }),
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //   }).catch((e) => console.error(e));
+  };
 
   return (
     <div
@@ -146,9 +166,9 @@ const Products = () => {
                   <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
                     Restez informés !
                   </h5>
-                  {/* <p>Pour ne rater aucune information.</p> */}
+                  <input type="text"  id={emailRegistrationId} value={input} onInput={e => setInput(e.target.value)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Votre adresse email"/>
                 </div>
-                <ButtonPrimary>Contact</ButtonPrimary>
+                <ButtonPrimary onclick={registerEmailToNewsletter}>S'inscrire</ButtonPrimary>
               </div>
               <div
                 className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"
