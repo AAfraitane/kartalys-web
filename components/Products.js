@@ -1,14 +1,11 @@
 import React, { useMemo, useId, useState } from "react";
-import Image from "next/image";
 import Testimoni from "./Testimoni";
 import ButtonPrimary from "./misc/ButtonPrimary";
-import ButtonOutline from "./misc/ButtonOutline.";
-import Maps from "../public/assets/HugeGlobal.svg";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
-const kartalysListId = "10323574"
+const kartalysListId = "10352415"
 
 
 
@@ -19,16 +16,16 @@ const Products = (props) => {
   const [input, setInput] = useState(props?.value ?? '');
 
   const registerEmailToNewsletter = (email) => {
-    // fetch("http://localhost:3001/api/todos", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       email,
-    //       listId: kartalysListId,
-    //     }),
-    //     headers: {
-    //       "content-type": "application/json",
-    //     },
-    //   }).catch((e) => console.error(e));
+    fetch("https://dfdrpd6jkqhvvecr3v2ycnzo4i0ldkcc.lambda-url.us-east-1.on.aws", {
+        method: "POST",
+        body: JSON.stringify({
+          email,
+          listId: kartalysListId,
+        }),
+        headers: {
+          "content-type": "application/json",
+        },
+      }).catch((e) => console.error(e));
   };
 
   return (
