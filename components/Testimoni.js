@@ -11,24 +11,24 @@ const Testimoni = ({
   listTestimoni = [
     {
       name: "Naoufad SAANDI",
-      image: "/assets/people-3.png",
+      image: "/assets/team-member-01.jpg",
       position: "CEO",
       testimoni:
         "Data Scientist",
     },
     {
       name: "Samir SAID ALI",
-      image: "/assets/people-3.png",
+      image: "/assets/team-member-02.jpg",
       position: "CTO",
       testimoni:
-        "Senoir Software Engineer",
+        "Senior Software Engineer",
     },
     {
       name: "Abdoul-Hakim AFRAITANE",
-      image: "/assets/people-3.png",
+      image: "/assets/team-member-03.jpg",
       position: "COO",
       testimoni:
-        "Senoir Software Engineer",
+        "Senior Software Engineer",
     },
   ],
 }) => {
@@ -80,10 +80,13 @@ const Testimoni = ({
               <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
                 <div className="flex order-2 xl:order-1">
                   <Image
+                    // Rounded Image
+                    className="rounded-full"
                     src={listTestimonis.image}
-                    height={50}
-                    width={50}
-                    alt="Icon People"
+                    height={80}
+                    width={80}
+                    
+                    alt="Icon team member"
                   />
                   <div className="flex flex-col ml-5 text-left">
                     <p className="text-lg text-black-600 capitalize">
@@ -92,10 +95,10 @@ const Testimoni = ({
                     <p className="text-sm text-black-500 capitalize">
                       {listTestimonis.position}
                     </p>
+                    <p className="mt-5 text-left">{listTestimonis.testimoni}</p>
                   </div>
                 </div>
               </div>
-              <p className="mt-5 text-left">{listTestimonis.testimoni}</p>
             </div>
           </div>
         ))}
