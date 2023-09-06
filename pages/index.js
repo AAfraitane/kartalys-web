@@ -11,9 +11,9 @@ export default function Home() {
       <SeoHead title='Kartalys Landing Page' />
       <Layout>
         <Hero />
-        <Value />
         <Kartapay />
         <Products />
+        <Value />
       </Layout>
     </>
   );

@@ -44,11 +44,29 @@ const Header = () => {
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "about"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 a")
+                  ? " text-red-700 animation-active "
+                  : " text-black-500 hover:text-red-700 a")
               }
             >
               Accueil
+            </LinkScroll>
+            <LinkScroll
+              activeClass="active"
+              to="kartapay"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              onSetActive={() => {
+                setActiveLink("products");
+              }}
+              className={
+                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                (activeLink === "products"
+                  ? " text-red-700 animation-active "
+                  : " text-black-500 hover:text-red-700 ")
+              }
+            >
+              Nos solutions
             </LinkScroll>
             <LinkScroll
               activeClass="active"
@@ -62,47 +80,11 @@ const Header = () => {
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "value"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
+                  ? " text-red-700 animation-active "
+                  : " text-black-500 hover:text-red-700 ")
               }
             >
               Valeurs
-            </LinkScroll>
-            <LinkScroll
-              activeClass="active"
-              to="kartapay"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("kartapay");
-              }}
-              className={
-                "px-4 py-2 mx-2 cursor-pointer animation-blue-hover inline-block relative" +
-                (activeLink === "kartapay"
-                  ? " text-blue-500 animation-active border-blue-500"
-                  : " text-black-500 hover:text-blue-500 ")
-              }
-            >
-              Kartapay
-            </LinkScroll>
-            <LinkScroll
-              activeClass="active"
-              to="products"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("products");
-              }}
-              className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "products"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
-              }
-            >
-              Services
             </LinkScroll>
           </ul>
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
@@ -127,7 +109,7 @@ const Header = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "about"
-                  ? "  border-orange-500 text-orange-500"
+                  ? "  border-red-700 text-red-700"
                   : " border-transparent")
               }
             >
@@ -149,71 +131,7 @@ const Header = () => {
             </LinkScroll>
             <LinkScroll
               activeClass="active"
-              to="value"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("value");
-              }}
-              className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
-                (activeLink === "value"
-                  ? "  border-orange-500 text-orange-500"
-                  : " border-transparent ")
-              }
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                />
-              </svg>
-              Valeurs
-            </LinkScroll>
-            <LinkScroll
-              activeClass="active"
               to="kartapay"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("kartapay");
-              }}
-              className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
-                (activeLink === "kartapay"
-                  ? "  border-blue-500 text-blue-500"
-                  : " border-transparent ")
-              }
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                />
-              </svg>
-              Kartapay
-            </LinkScroll>
-            <LinkScroll
-              activeClass="active"
-              to="products"
               spy={true}
               smooth={true}
               duration={1000}
@@ -223,7 +141,7 @@ const Header = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "products"
-                  ? "  border-orange-500 text-orange-500"
+                  ? "  border-red-700 text-red-700"
                   : " border-transparent ")
               }
             >
@@ -242,6 +160,38 @@ const Header = () => {
                 />
               </svg>
               Services
+            </LinkScroll>
+            <LinkScroll
+              activeClass="active"
+              to="value"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              onSetActive={() => {
+                setActiveLink("value");
+              }}
+              className={
+                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                (activeLink === "value"
+                  ? "  border-red-700 text-red-700"
+                  : " border-transparent ")
+              }
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                />
+              </svg>
+              Valeurs
             </LinkScroll>
           </ul>
         </div>
