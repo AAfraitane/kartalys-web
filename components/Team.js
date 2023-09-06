@@ -43,7 +43,7 @@ const Team = (props) => {
               variants={scrollAnimation}
               className="text-center leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12"
             >
-             Innovants et pleins de ressources, nous sommes prêts à vous accompagner dans vos défis
+             Forte d'expériences en architecture, développement logiciels et gestion de projets, notre équipe est prête à vous accompagner dans vos projets.
             </motion.p>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
