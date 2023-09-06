@@ -19,7 +19,7 @@ const Kartapay = () => {
           <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
             <Image
               src="/assets/kartapay_flat_2_transparent.png"
-              alt="Kartapay"
+              alt="kartaPay"
               layout="responsive"
               quality={100}
               height={350}
