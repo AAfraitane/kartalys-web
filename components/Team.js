@@ -30,7 +30,8 @@ const Team = (props) => {
     });
   };
 
-  const registerEmailToNewsletter = () => {
+  const registerEmailToNewsletter = (event) => {
+    event.preventDefault()
     fetch("https://dfdrpd6jkqhvvecr3v2ycnzo4i0ldkcc.lambda-url.us-east-1.on.aws", {
         method: "POST",
         body: JSON.stringify({
@@ -88,7 +89,7 @@ const Team = (props) => {
                         <input type="text"  id={registerPhoneNumber} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Téléphone (facultatif)"/>
                         <input type="text" required id={registerEmail} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Adresse email"/>
                     </div>
-                    <ButtonPrimary onclick={registerEmailToNewsletter} >S'inscrire</ButtonPrimary>
+                    <ButtonPrimary onclick={e => registerEmailToNewsletter(e)} >S'inscrire</ButtonPrimary>
                 </div>
               </form>   
               <div
