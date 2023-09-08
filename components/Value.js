@@ -43,7 +43,7 @@ const Values = () => {
                   }
                 }}
               >
-                <p className="text-lg text-black-600 font-medium my-2 sm:my-7">
+                <p className="text-lg text-black-600 font-medium my-2 sm:my-7 mx-3">
                   Nos principes
                 </p>
                 <p className="text-lg text-gray-600 mx-10">
@@ -70,7 +70,7 @@ const Values = () => {
               <p className="text-lg text-black-600 font-medium my-2 sm:my-7">
                 Nos missions
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 mx-3">
                 <ul className="list-disc text-left items-center">
                   <li className="text-gray-600">Innovation constante</li>
                   <li className="text-gray-600">Inclusion numérique</li>
