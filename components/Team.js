@@ -9,15 +9,37 @@ import Testimoni from "./Testimoni";
 const Team = (props) => {
 
   const kartalysListId = "10352415"
-  const emailRegistrationId = 'emailRegistrationId';
-  const [input, setInput] = useState(props?.value ?? '');
+  const registerFirstName = 'registerFirstName';
+  const registerLastName = 'registerLastName';
+  const registerCompany = 'registerCompany';
+  const registerPhoneNumber = 'registerPhoneNumber';
+  const registerEmail = 'registerEmail';
 
-  const registerEmailToNewsletter = (email) => {
+  const [contact, setContactInfo] = useState({
+    registerFirstName: "",
+    registerLastName: "",
+    registerCompany: "",
+    registerPhoneNumber: "",
+    registerEmail: "",
+  });
+
+  const updateContactInfo = (e) => {
+    setContactInfo({
+      ...contact,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const registerEmailToNewsletter = () => {
+    // alert(JSON.stringify(contact))
     fetch("https://dfdrpd6jkqhvvecr3v2ycnzo4i0ldkcc.lambda-url.us-east-1.on.aws", {
         method: "POST",
         body: JSON.stringify({
-          email,
+          email: contact.registerEmail,
           listId: kartalysListId,
+          name: contact.registerFirstName + " " + contact.registerLastName,
+          company: contact.registerCompany,
+          phonenumber: contact.registerPhoneNumber,
         }),
         headers: {
           "content-type": "application/json",
@@ -58,7 +80,13 @@ const Team = (props) => {
                   <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
                     Restez informés !
                   </h5>
-                  <input type="text"  id={emailRegistrationId} value={input} onInput={e => setInput(e.target.value)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Votre adresse email"/>
+                  <div className="flex flex-row items-center justify-start"> 
+                    <input type="text" required id={registerLastName} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-1/2 mt-4 mr-2" placeholder="Nom"/>
+                    <input type="text" required id={registerFirstName} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-1/2 mt-4 " placeholder="Prénom"/>
+                  </div>
+                  <input type="text"  id={registerCompany} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Société (facultatif)"/>
+                  <input type="text"  id={registerPhoneNumber} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Téléphone (facultatif)"/>
+                  <input type="text" required id={registerEmail} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Adresse email"/>
                 </div>
                 <ButtonPrimary onclick={registerEmailToNewsletter}>S'inscrire</ButtonPrimary>
               </div>
