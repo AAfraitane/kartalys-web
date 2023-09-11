@@ -66,7 +66,7 @@ const Header = () => {
                   : " text-black-500 hover:text-red-700 ")
               }
             >
-              Nos solutions
+              Solutions
             </LinkScroll>
             <LinkScroll
               activeClass="active"
@@ -84,7 +84,7 @@ const Header = () => {
                   : " text-black-500 hover:text-red-700 ")
               }
             >
-              Nos valeurs
+              Valeurs
             </LinkScroll>
           </ul>
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
@@ -191,7 +191,7 @@ const Header = () => {
                   d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                 />
               </svg>
-              Nos valeurs
+              Valeurs
             </LinkScroll>
           </ul>
         </div>

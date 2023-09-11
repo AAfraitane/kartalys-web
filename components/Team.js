@@ -6,6 +6,8 @@ import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import ButtonPrimary from "./misc/ButtonPrimary";
 import Testimoni from "./Testimoni";
 
+const notificationAPIUrl = 'https://dfdrpd6jkqhvvecr3v2ycnzo4i0ldkcc.lambda-url.us-east-1.on.aws'
+
 const Team = (props) => {
 
   const kartalysListId = "10352415"
@@ -32,12 +34,13 @@ const Team = (props) => {
 
   const registerEmailToNewsletter = (event) => {
     event.preventDefault()
-    fetch("https://dfdrpd6jkqhvvecr3v2ycnzo4i0ldkcc.lambda-url.us-east-1.on.aws", {
+    fetch(notificationAPIUrl, {
         method: "POST",
         body: JSON.stringify({
           email: contact.registerEmail,
           listId: kartalysListId,
-          name: contact.registerFirstName + " " + contact.registerLastName,
+          fistName: contact.registerFirstName,
+          lastName: contact.registerLastName,
           company: contact.registerCompany,
           phonenumber: contact.registerPhoneNumber,
         }),
