@@ -80,7 +80,16 @@ module.exports = {
         500: "#fff",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        red: {
+          700: "#910C00",
+        },
+      },
+      listStyleImage: {
+        checklist: 'url("/public/assets/checklist.svg")',
+      },
+    },
   },
   variants: {
     extend: {

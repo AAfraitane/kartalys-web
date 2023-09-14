@@ -34,7 +34,7 @@ const Kartapay = () => {
           Il s'agit d'une plateforme de paiement numérique novatrice conçue pour digitaliser les paiements aux Comores.
           Sa fonction première est d'aggréger les différentns supports de paiement disponibles.
           </p>
-          <ButtonKartapay class="mt-12">En savoir plus</ButtonKartapay>
+          <ButtonKartapay scrollTo="contact-us" class="mt-12">En savoir plus</ButtonKartapay>
           
         </motion.div>
         </ScrollAnimationWrapper>

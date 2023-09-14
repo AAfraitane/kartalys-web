@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Layout from "../components/Layout/Layout";
 import SeoHead from "../components/SeoHead";
 import Team from "../components/Team";
+import Expertise from "../components/Expertise";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Kartapay />
         <Solutions />
         <Value />
+        <Expertise />
         <Team />
       </Layout>
     </>

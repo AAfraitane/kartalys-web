@@ -42,7 +42,7 @@ const Hero = ({
               <p className="text-black-500 mt-4 mb-6">
               Votre solution sur mesure pour répondre aux défis IT en plein cœur de l'océan Indien et de l'Afrique.
               </p>
-              <ButtonPrimary>Contactez-nous</ButtonPrimary>
+              <ButtonPrimary scrollTo="contact-us">Contactez-nous</ButtonPrimary>
             </div>
             <div className="flex w-full">
               <motion.div className="h-full w-full" variants={scrollAnimation}>
