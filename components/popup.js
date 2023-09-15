@@ -1,30 +1,44 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
-const SuccessNotification = () => {
-    return (
-        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
-        <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white-500 rounded-lg shadow-lg p-8 flex flex-col justify-center items-center"
-        >
-            <h3 className="text-2xl font-semibold text-gray-700 mb-4">
-            Merci pour votre inscription !
-            </h3>
-            <p className="text-gray-600 text-center">
-            Vous allez recevoir un email de confirmation dans quelques minutes.
-            </p>
-            <Link
-            to="/"
-            className="bg-red-700 text-white-500 font-semibold rounded-lg py-3 px-8 mt-6 hover:shadow-orange-md transition-all"
-            >
-            Retour à l'accueil
-            </Link>
-        </motion.div>
-        </div>
-    );
+import React from "react";
+import {
+  Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+} from "@material-tailwind/react";
+ 
+export default function DialogDefault() {
+  const [open, setOpen] = React.useState(false);
+ 
+  const handleOpen = () => setOpen(!open);
+ 
+  return (
+    <>
+      <Button onClick={handleOpen} variant="gradient">
+        Open Dialog
+      </Button>
+      <Dialog open={open} handler={handleOpen}>
+        <DialogHeader>Its a simple dialog.</DialogHeader>
+        <DialogBody divider>
+          The key to more success is to have a lot of pillows. Put it this way,
+          it took me twenty five years to get these plants, twenty five years of
+          blood sweat and tears, and I&apos;m never giving up, I&apos;m just
+          getting started. I&apos;m up to something. Fan luv.
+        </DialogBody>
+        <DialogFooter>
+          <Button
+            variant="text"
+            color="red"
+            onClick={handleOpen}
+            className="mr-1"
+          >
+            <span>Cancel</span>
+          </Button>
+          <Button variant="gradient" color="green" onClick={handleOpen}>
+            <span>Confirm</span>
+          </Button>
+        </DialogFooter>
+      </Dialog>
+    </>
+  );
 }
-
-export default SuccessNotification;
