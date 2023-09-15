@@ -35,24 +35,33 @@ const ContactForm = (props) => {
         });
     };
 
+    const removeEmptyFields = (obj) => {
+        Object.keys(obj).forEach(
+        (key) => obj[key] === "" && delete obj[key]
+        );
+        return obj;
+    };
+
     const registerEmailToNewsletter = (event) => {
         event.preventDefault()
-        // if(!event) return;
-        fetch(notificationAPIUrl, {
-            method: "POST",
-            body: JSON.stringify({
+        const body = JSON.stringify(removeEmptyFields({
             email: contact.registerEmail,
             listId: kartalysListId,
             fistName: contact.registerFirstName,
             lastName: contact.registerLastName,
             company: contact.registerCompany,
             phonenumber: contact.registerPhoneNumber,
-            }),
+        }))
+        fetch(notificationAPIUrl, {
+            method: "POST",
+            body,
             headers: {
-            "content-type": "application/json",
+                "content-type": "application/json",
             },
         }).catch((e) => console.error(e));
     };
+
+
 
 
     return <ScrollAnimationWrapper className="relative w-full mt-16">
