@@ -4,7 +4,7 @@ import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ButtonPrimary from "./misc/ButtonPrimary";
-import DialogDefault from "./popup";
+import Popup from "./popup";
 
 const notificationAPIUrl = 'https://dfdrpd6jkqhvvecr3v2ycnzo4i0ldkcc.lambda-url.us-east-1.on.aws'
 
@@ -42,7 +42,10 @@ const ContactForm = (props) => {
         return obj;
     };
 
-    const registerEmailToNewsletter = (event) => {
+    const [open, setOpen] = useState(false)
+    const [success, setSuccess] = useState(false)
+
+    const registerEmailToNewsletter = async (event) => {
         event.preventDefault()
         const body = JSON.stringify(removeEmptyFields({
             email: contact.registerEmail,
@@ -52,23 +55,34 @@ const ContactForm = (props) => {
             company: contact.registerCompany,
             phonenumber: contact.registerPhoneNumber,
         }))
-        fetch(notificationAPIUrl, {
-            method: "POST",
-            body,
-            headers: {
-                "content-type": "application/json",
-            },
-        }).catch((e) => console.error(e));
+        try {
+            const result = await fetch(notificationAPIUrl, {
+                method: "POST",
+                body,
+                headers: {
+                    "content-type": "application/json",
+                },
+            })
+            if (!result.ok && result.status !== 200) {
+                setSuccess(false)
+                setOpen(true)
+                console.error(result)
+            }
+            setSuccess(true)
+            setOpen(true)
+        } catch (error) {
+            setSuccess(false)
+            setOpen(true)
+            console.error(error)
+        }
+        
     };
-
-
 
 
     return <ScrollAnimationWrapper className="relative w-full mt-16">
             <motion.div variants={scrollAnimation} custom={{duration: 3}}>
-            {/* Test popup */}
-            {/* <DialogDefault /> */}
-            <form>
+            
+            <form onSubmit={registerEmailToNewsletter}>
                 <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
                     <div className="flex flex-col text-left w-10/12 sm:w-7/12 lg:w-5/12 mb-6 sm:mb-0">
                     <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
@@ -82,7 +96,8 @@ const ContactForm = (props) => {
                         <input type="text"  id={registerPhoneNumber} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Téléphone (facultatif)"/>
                         <input type="text" required id={registerEmail} onInput={e => updateContactInfo(e)} className="border-2 border-gray-500 rounded-lg px-4 py-2 w-full mt-4" placeholder="Adresse email"/>
                     </div>
-                    <ButtonPrimary id="contact-us" onclick={e => registerEmailToNewsletter(e)} >S'inscrire</ButtonPrimary>
+                    <ButtonPrimary type="submit" id="contact-us">S'inscrire</ButtonPrimary>
+                    <Popup open={open} setOpen={setOpen} success={success}/>
                 </div>
             </form>
             <div

@@ -1,7 +1,7 @@
 import React from "react";
 import { scrollToId } from "./utils";
 
-export const ButtonPrimary = ({ children, addClass, onclick, scrollTo, id}) => {
+export const ButtonPrimary = ({ children, addClass, onclick, onSubmit, scrollTo, id, type}) => {
   const onclickAndScroll = (e) => {
     if (onclick) onclick(e)
     if (scrollTo) scrollToId(scrollTo)
@@ -13,7 +13,9 @@ export const ButtonPrimary = ({ children, addClass, onclick, scrollTo, id}) => {
         "py-3 lg:py-4 px-12 lg:px-16 text-white-500 font-semibold rounded-lg bg-red-700 hover:shadow-orange-md transition-all outline-none " +
         addClass
       }
+      onSubmit={onSubmit}
       onClick={onclickAndScroll}
+      type={type}
     >
       {children}
     </button>
