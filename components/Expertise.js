@@ -18,11 +18,11 @@ const Expertise = () => {
       <ScrollAnimationWrapper className="flex w-full justify-end">
           <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
             <Image
-              src="/assets/kartapay_flat_2_transparent.png"
+              src="/assets/africa.png"
               alt="expertise"
               layout="responsive"
               quality={100}
-              height={350}
+              height={250}
               width={300}
             />
           </motion.div>
