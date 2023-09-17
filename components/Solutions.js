@@ -54,11 +54,7 @@ const Solutions = () => {
                   karta<span className="text-red-600" >Cloud</span>
                 </p>
                 <p className="text-lg text-gray-600">
-                  Dans ce domaine, nous offrons
-                  des solutions de cloud et
-                  d'hébergement de premier ordre
-                  pour les entreprises de toutes
-                  tailles.
+                  Cette branche offre des solutions d'intégration cloud et d'hébergement pour les entreprises de toutes tailles.
                 </p>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -84,10 +80,7 @@ const Solutions = () => {
                 karta<span className="text-green-700">Soft</span>
               </p>
               <p className="text-lg text-gray-600">
-                Cette branche se consacre au
-                développement de logiciels
-                novateurs pour répondre aux défis
-                des entreprises modernes.
+              Cette branche se consacre au développement de logiciels novateurs pour répondre aux défis des entreprises modernes
               </p>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -114,11 +107,7 @@ const Solutions = () => {
                 karta<span className="text-yellow-700">Sys</span>
               </p>
               <p className="text-lg text-gray-600">
-                Offrant des services
-                technologiques de premier plan,
-                cette branche est à l'avant-garde
-                de l'assistance technique et du
-                support aux entreprises.
+              Cette branche est à l'avant-garde de l'assistance technique aux entreprises. Elle offre des services technologiques de premier plan.
               </p>
               </motion.div>
             </ScrollAnimationWrapper>

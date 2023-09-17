@@ -3,7 +3,6 @@ import React, { useState } from "react";
 // import react slick
 import Slider from "react-slick";
 import Image from "next/image";
-import Stars from "../public/assets/Icon/stars.svg";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
@@ -26,7 +25,7 @@ const Testimoni = ({
     {
       name: "Abdoul-Hakim AFRAITANE",
       image: "/assets/team-member-03.png",
-      position: "COO",
+      position: "CIO",
       testimoni:
         "Senior Software Engineer",
     },

@@ -4,17 +4,17 @@ import { useRouter } from "next/router";
 
 // Default value for some meta data
 const defaultMeta = {
-  title: 'Kartalys',
-  siteName: 'Kartalys',
+  title: 'KartaLys',
+  siteName: 'KartaLys',
   description:
-    'Landing page VPN Kartalys',
+    'Landing page KartaLys',
   // change base url of your web (without '/' at the end)
-  url: 'https://next-landing-vpn.vercel.app',
+  url: 'https://kartalys.io',
   type: 'website',
   robots: 'follow, index',
   // change with url of your image (recommended dimension = 1.91:1)
   // used in twitter, facebook, etc. card when link copied in tweet/status 
-  image: 'https://next-landing-vpn.vercel.app/assets/card-image.png',
+  image: 'https://kartalys.io/assets/Kartalys.png',
   author: '@kartalys'
 };
 
@@ -87,13 +87,13 @@ const SeoHead = (props) => {
         <link key={linkProps.href} {...linkProps} />
       ))}
       {/* Windows 8 app icon */}
-      <meta name='msapplication-TileColor' content='#F53838' />
+      <meta name='msapplication-TileColor' content='#910C00' />
       <meta
         name='msapplication-TileImage'
         content='/favicon/ms-icon-144x144.png'
       />
       {/* Accent color on supported browser */}
-      <meta name='theme-color' content='#F53838' />
+      <meta name='theme-color' content='#910C00' />
     </Head>
   );
 };
@@ -148,7 +148,7 @@ const favicons = [
   {
     rel: 'mask-icon',
     href: '/favicon/safari-pinned-tab.svg',
-    color: '#F59A9A',
+    color: '#910C00',
   },
   {
     rel: 'icon',

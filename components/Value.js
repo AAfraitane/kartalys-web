@@ -14,14 +14,14 @@ const Values = () => {
       className="bg-gradient-to-b from-white-300 to-white-500 w-full py-14"
       id="values"
     >
-      <div className="max-w-screen-xl  px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
+      <div className="max-w-screen-xl  px-6 mx-auto flex flex-col w-full text-center justify-center">
         <div className="flex flex-col w-full">
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
             >
-              Nos valeurs
+              Notre identité
             </motion.h3>
           </ScrollAnimationWrapper>
           <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-12 py-8 lg:py-12 px-6 sm:px-0 lg:px-6">
@@ -36,15 +36,11 @@ const Values = () => {
                   }
                 }}
               >
-                <p className="text-lg text-black-600 font-medium my-2 sm:my-7 mx-3">
-                  Nos principes
+                <p className="text-lg text-black-600 font-medium my-2 sm:my-7">
+                  Nos valeurs
                 </p>
-                <p className="text-lg text-gray-600 mx-10">
-                  <ul className="list-disc text-left items-center">
-                    <li className="text-gray-600">Innovation</li>
-                    <li className="text-gray-600">Inclusion</li>
-                    <li className="text-gray-600">Intégrité</li>
-                  </ul>
+                <p className="text-md text-gray-600 mb-5">
+                  L'Innovation, l'Inclusion et l'Intégrité guident notre culture d'entreprise, inspirant la créativité et la confiance dans tout ce que nous faisons.
                 </p>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -63,13 +59,8 @@ const Values = () => {
               <p className="text-lg text-black-600 font-medium my-2 sm:my-7">
                 Nos missions
               </p>
-              <p className="text-lg text-gray-600 mx-3">
-                <ul className="list-disc text-left items-center">
-                  <li className="text-gray-600">Innovation constante</li>
-                  <li className="text-gray-600">Inclusion numérique</li>
-                  <li className="text-gray-600">Développement économique</li>
-                  <li className="text-gray-600">Responsabilité sociale d'entreprise (RSE)</li>
-                </ul>
+              <p className="text-md text-gray-600 mb-5">
+                Catalyser l'innovation, promouvoir l'inclusion numérique et stimuler le développement économique en Afrique et dans l'Océan Indien. 
               </p>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -87,9 +78,8 @@ const Values = () => {
               <p className="text-lg text-black-600 font-medium my-2 sm:my-7">
                 Notre vision
               </p>
-              <p className="text-lg text-gray-600">
-                Nous façonnons l'avenir en plaçant l'innovation technologique au cœur du progrès socio-économique, 
-                convertissant ainsi le digital en un tremplin universel.
+              <p className="text-md text-gray-600 mb-5">
+                Faire avancer en intégrant l'innovation technologique au progrès socio-économique, transformant le numérique en opportunité universelle.
               </p>
               </motion.div>
             </ScrollAnimationWrapper>
