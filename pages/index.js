@@ -10,7 +10,7 @@ import Expertise from "../components/Expertise";
 export default function Home() {
   return (
     <>
-      <SeoHead title='KartaLys Landing Page' />
+      <SeoHead title='KartaLys' />
       <Layout>
         <Hero />
         <Kartapay />
