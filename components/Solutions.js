@@ -35,7 +35,7 @@ const Solutions = () => {
             <ScrollAnimationWrapper className="flex justify-items-start">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-items-start	 items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-10 xl:px-16"
+                className="flex flex-col justify-items-start	 items-center border-2 border-gray-500 rounded-xl py-4 px-6"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -61,7 +61,7 @@ const Solutions = () => {
             <ScrollAnimationWrapper className="flex justify-items-start">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-items-start items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-10 xl:px-16"
+                className="flex flex-col justify-items-start items-center border-2 border-gray-500 rounded-xl py-4 px-6"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -87,7 +87,7 @@ const Solutions = () => {
             <ScrollAnimationWrapper className="flex justify-items-start">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-items-start items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-10 xl:px-16"
+                className="flex flex-col justify-items-start items-center border-2 border-gray-500 rounded-xl py-4 px-6"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -107,7 +107,7 @@ const Solutions = () => {
                 karta<span className="text-yellow-700">Sys</span>
               </p>
               <p className="text-lg text-gray-600">
-              Cette branche est à l'avant-garde de l'assistance technique aux entreprises. Elle offre des services technologiques de premier plan.
+              Cette branche est à l'avant-garde de l'assistance technique aux entreprises, offrant des services informatique de qualité.
               </p>
               </motion.div>
             </ScrollAnimationWrapper>
