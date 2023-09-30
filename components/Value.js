@@ -28,7 +28,7 @@ const Values = () => {
             <ScrollAnimationWrapper className="flex justify-items-start	">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-10 xl:px-16 w-full"
+                className="flex flex-col border-2 border-gray-500 rounded-xl py-4 px-6 w-full"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -47,7 +47,7 @@ const Values = () => {
             <ScrollAnimationWrapper className="flex justify-items-start	">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-items-start items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-10 xl:px-16 w-full"
+                className="flex flex-col justify-items-start items-center border-2 border-gray-500 rounded-xl py-4 px-6 w-full"
                 whileHover={{
                   scale : 1.1,
                   transition: {
@@ -60,14 +60,14 @@ const Values = () => {
                 Nos missions
               </p>
               <p className="text-md text-gray-600 mb-5">
-                Catalyser l'innovation, promouvoir l'inclusion numérique et stimuler le développement économique en Afrique et dans l'Océan Indien. 
+                Catalyser l'innovation, promouvoir l'inclusion numérique et stimuler le développement économique en Afrique, dans l'Océan Indien et surtout aux Comores. 
               </p>
               </motion.div>
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper className="flex justify-items-start">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-items-start items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-10 xl:px-16 w-full"
+                className="flex flex-col justify-items-start items-center border-2 border-gray-500 rounded-xl py-4 px-6 w-full"
                 whileHover={{
                   scale : 1.1,
                   transition: {
