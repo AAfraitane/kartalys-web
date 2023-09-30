@@ -11,7 +11,7 @@ const Expertise = () => {
 
   return (
     <div
-      className="mt-6 bg-gradient-to-b from-white-300 to-white-500 max-w-screen-xl mt-8 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto py-14"
+      className="mt-6 bg-gradient-to-b from-white-300 to-white-500 mt-8 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-32 xl:px-52 mx-auto py-14"
       id="expertise"
     >
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 p y-4">
