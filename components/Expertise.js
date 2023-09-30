@@ -16,14 +16,14 @@ const Expertise = () => {
     >
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 p y-4">
       <ScrollAnimationWrapper className="flex w-full justify-end">
-          <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
+          <motion.div className="h-full w-full xl:mx-10" variants={scrollAnimation}>
             <Image
               src="/assets/africa.png"
               alt="expertise"
               layout="responsive"
               quality={100}
-              height={200}
-              width={300}
+              height={240}
+              width={280}
             />
           </motion.div>
         </ScrollAnimationWrapper>

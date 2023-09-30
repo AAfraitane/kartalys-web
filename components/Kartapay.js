@@ -15,8 +15,8 @@ const Kartapay = () => {
       id="kartapay"
     >
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 p y-4 mx-4">
-      <ScrollAnimationWrapper className="max-w-screen-sm flex justify-end xl:ml-90">
-          <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
+      <ScrollAnimationWrapper className="max-w-screen-sm flex justify-end xl:mx-120">
+          <motion.div className="h-full w-full xl:mx-10" variants={scrollAnimation}>
             <Image
               src="/assets/kartapay_flat_2_transparent.png"
               alt="kartaPay"
