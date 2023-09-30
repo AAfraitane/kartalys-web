@@ -15,21 +15,21 @@ const Kartapay = () => {
       id="kartapay"
     >
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 p y-4 mx-4">
-      <ScrollAnimationWrapper className="max-w-screen-sm flex justify-end xl:ml-60">
+      <ScrollAnimationWrapper className="max-w-screen-sm flex justify-end xl:ml-90">
           <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
             <Image
               src="/assets/kartapay_flat_2_transparent.png"
               alt="kartaPay"
               layout="responsive"
               quality={100}
-              height={100}
-              width={200}
-            />
+              width={380}
+              height={130}
+            />  
           </motion.div>
         </ScrollAnimationWrapper>
 
-        <ScrollAnimationWrapper className="flex justify-start xl:mr-60">
-        <motion.div className="flex flex-col items-start justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
+        <ScrollAnimationWrapper className="flex justify-start xl:mx-10">
+        <motion.div className="flex flex-col items-start justify-center ml-auto w-full" variants={scrollAnimation}>
           <p className="my-4 text-black-800">
             KartaPay est un aggrégateur de paiements numériques, créé pour répondre au besoin d'inclusion financière aux Comores.
             Payez facilement et en toute situation grâce à un QR code sécurisé.
