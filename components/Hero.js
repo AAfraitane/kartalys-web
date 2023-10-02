@@ -53,8 +53,7 @@ const Hero = ({
                 <Image
                   // style = {{borderRadius: "3%"}} and reflexion on bottom
                   id="hero-image"
-                  style={{borderRadius: "2%"}}
-                  src="/assets/IMG_3074_computer_without_bg2.png"
+                  src="/assets/home-kartalys-xs.png"
                   alt="kartalys"
                   quality={100}
                   width={612}

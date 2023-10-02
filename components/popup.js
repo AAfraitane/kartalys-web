@@ -6,7 +6,6 @@ export default function Popup(props) {
   const cancelButtonRef = useRef(null)
   const successMessage = "Votre demande a bien été prise en compte."
   const errorMessage = "Une erreur est survenue, veuillez réessayer plus tard."
-  console.log(props, "props")
   return (
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={props.setOpen}>
