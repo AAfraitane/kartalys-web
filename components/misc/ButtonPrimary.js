@@ -30,8 +30,7 @@ export const ButtonKartapay = ({ children, addClass, onclick, scrollTo, }) => {
         addClass
       }
       onClick={() => {
-        scrollToId(scrollTo)
-        if (onclick) onclick()
+        window.open("https://kartapay.me", "_blank")
       }}
     >
       {children}
